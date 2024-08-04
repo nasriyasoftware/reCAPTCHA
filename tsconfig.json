@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "moduleResolution": "Node",
+        "rootDir": "./src",
+        "declaration": true,
+        "declarationDir": "./dist/@types",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "frontend/elements/*": [
+                "./src/frontend/static/elements/*"
+            ],
+            "frontend/utils/*": [
+                "./src/frontend/static/utils/*"
+            ],
+            "frontend/modules/*": [
+                "./src/frontend/static/modules/*"
+            ],
+            "frontend/docs/*": ["./src/frontend/docs/*"]
+        },
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

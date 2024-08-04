@@ -1,0 +1,59 @@
+{
+  "name": "@nasriya/recaptcha",
+  "version": "1.0.0",
+  "main": "./dist/cjs/main.js",
+  "module": "./dist/esm/main.js",
+  "types": "./dist/@types/main.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/main.js",
+      "require": "./dist/cjs/main.js",
+      "types": "./dist/@types/main.d.ts"
+    }
+  },
+  "maintainers": [
+    {
+      "name": "Ahmad Nasriya",
+      "email": "ahmad@nasriya.net",
+      "url": "https://www.linkedin.com/in/ahmadnasriya/"
+    }
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs && postbuild",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "postbuild-init": "postbuild-init",
+    "test": "jest",
+    "deepTest": "jest --coverage"
+  },
+  "author": "Nasriya Software, LLC.",
+  "license": "Nasriya License",
+  "description": "Backend package for integrating Google reCAPTCHA to protect against bots and automated abuse.",
+  "keywords": [
+    "Google reCAPTCHA",
+    "reCAPTCHA",
+    "bot protection",
+    "anti-spam",
+    "security",
+    "user verification",
+    "backend"
+  ],
+  "devDependencies": {
+    "@nasriya/postbuild": "^1.0.6",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.11",
+    "ts-jest": "^29.1.4",
+    "typescript": "^5.5.3"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/nasriyasoftware/reCAPTCHA"
+  },
+  "bugs": {
+    "url": "https://github.com/nasriyasoftware/reCAPTCHA/issues"
+  },
+  "homepage": "https://package.nasriya.net/reCAPTCHA"
+}
